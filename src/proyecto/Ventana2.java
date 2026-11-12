@@ -192,7 +192,7 @@ public class Ventana2 extends javax.swing.JFrame {
                     if (pgras >= 3.2f && pgras <= 3.9f) {
                         if (den >= 1.028f && den <= 1.033f) {
                             resultado = "Estandares aceptados\n" +
-                                        "Producto recomendado: Yogur o Mantequilla " +
+                                        "Producto recomendado00: Yogur o Mantequilla " +
                                         "(excelente balance graso y rendimiento general).";
                         } else {
                             resultado = "Densidad no válida (Rango vaca: 1.028 - 1.033)";
