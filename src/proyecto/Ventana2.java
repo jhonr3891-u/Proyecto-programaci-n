@@ -204,7 +204,7 @@ public class Ventana2 extends javax.swing.JFrame {
                     resultado = "pH no válido (Rango vaca: 6.5 - 6.7)";
                 }
             } else {
-                resultado = "Temperatura no ***** válida (Rango: 4 - 10 °C)";
+                resultado = "Temperatura no ***** danny válida (Rango: 4 - 10 °C)";
             }
         } else if ("bufala".equals(anm)) {
             if (temp >= 4 && temp <= 10) {
