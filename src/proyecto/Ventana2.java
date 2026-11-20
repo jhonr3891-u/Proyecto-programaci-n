@@ -191,20 +191,20 @@ public class Ventana2 extends javax.swing.JFrame {
                 if (ph >= 6.5f && ph <= 6.7f) {
                     if (pgras >= 3.2f && pgras <= 3.9f) {
                         if (den >= 1.028f && den <= 1.033f) {
-                            resultado = "Estandares si aceptados\n" +
-                                        "Producto recomendado00: Yogur o Mantequilla " +
+                            resultado = "Estandares aceptados\n" +
+                                        "Producto recomendado: Yogur o Mantequilla " +
                                         "(excelente balance graso y rendimiento general).";
                         } else {
                             resultado = "Densidad no válida (Rango vaca: 1.028 - 1.033)";
                         }
                     } else {
-                        resultado = "% de grasa no válida (Rango vaca: 3.2% - 3.9%)";
+                        resultado = "% de grasa No válida (Rango vaca: 3.2% - 3.9%)";
                     }
                 } else {
                     resultado = "pH no válido (Rango vaca: 6.5 - 6.7)";
                 }
             } else {
-                resultado = "Temperatura no válida (Rango: 4 - 10 °C)";
+                resultado = "Temperatura no ***** válida (Rango: 4 - 10 °C)";
             }
         } else if ("bufala".equals(anm)) {
             if (temp >= 4 && temp <= 10) {

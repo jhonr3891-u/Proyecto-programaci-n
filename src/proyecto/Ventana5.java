@@ -15,6 +15,7 @@ public class Ventana5 extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Ventana5.class.getName());
 
+    
     /**
      * Creates new form Ventana5
      */
@@ -38,6 +39,8 @@ public class Ventana5 extends javax.swing.JFrame {
         tfproducciondeseada = new javax.swing.JTextField();
         jCBopciones = new javax.swing.JComboBox<>();
         jBaceptar = new javax.swing.JButton();
+        jBregresar = new javax.swing.JButton();
+        jBparametrosnews = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,6 +55,12 @@ public class Ventana5 extends javax.swing.JFrame {
 
         jBaceptar.setText("Aceptar");
 
+        jBregresar.setText("Regresar");
+        jBregresar.addActionListener(this::jBregresarActionPerformed);
+
+        jBparametrosnews.setText("Ingresar nuevos parametros de leche");
+        jBparametrosnews.addActionListener(this::jBparametrosnewsActionPerformed);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -60,20 +69,29 @@ public class Ventana5 extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLmateriaprimanecs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCBopciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jCBopciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLmateriaprimanecs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jBregresar)
+                                .addGap(0, 150, Short.MAX_VALUE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jBaceptar)
-                    .addComponent(tfproducciondeseada, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(158, 158, 158))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jBaceptar)
+                            .addComponent(tfproducciondeseada, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(158, 158, 158))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jBparametrosnews)
+                        .addGap(79, 79, 79))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -90,7 +108,11 @@ public class Ventana5 extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLmateriaprimanecs, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jBregresar)
+                .addGap(18, 18, 18)
+                .addComponent(jBparametrosnews)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         pack();
@@ -103,6 +125,20 @@ public class Ventana5 extends javax.swing.JFrame {
     private void jCBopcionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBopcionesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCBopcionesActionPerformed
+
+    private void jBregresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBregresarActionPerformed
+        // TODO add your handling code here:
+        Ventana4 v4=new Ventana4();
+        v4.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jBregresarActionPerformed
+
+    private void jBparametrosnewsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBparametrosnewsActionPerformed
+        // TODO add your handling code here:
+        Ventana1 v5=new Ventana1();
+        v5.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jBparametrosnewsActionPerformed
     private void jBaceptarActionPerformed(java.awt.event.ActionEvent evt) {                                          
         calcularMateriaPrima();
     }
@@ -187,6 +223,8 @@ public class Ventana5 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBaceptar;
+    private javax.swing.JButton jBparametrosnews;
+    private javax.swing.JButton jBregresar;
     private javax.swing.JComboBox<String> jCBopciones;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
