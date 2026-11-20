@@ -191,7 +191,7 @@ public class Ventana2 extends javax.swing.JFrame {
                 if (ph >= 6.5f && ph <= 6.7f) {
                     if (pgras >= 3.2f && pgras <= 3.9f) {
                         if (den >= 1.028f && den <= 1.033f) {
-                            resultado = "Estandares aceptados\n" +
+                            resultado = "Estandares si aceptados\n" +
                                         "Producto recomendado00: Yogur o Mantequilla " +
                                         "(excelente balance graso y rendimiento general).";
                         } else {
