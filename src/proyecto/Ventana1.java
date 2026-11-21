@@ -133,7 +133,7 @@ public class Ventana1 extends javax.swing.JFrame {
                 )
             ));
             
-            String reproducirSonido = ("/proyecto/sonidos/vaca.wav");
+            String reproducirSonido = ("/proyecto/sonidos/cabra.wav");
 
             break;
 
