@@ -4,11 +4,33 @@
  */
 package proyecto;
 
+
+import java.io.*;
+import javax.sound.sampled.*;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
+
 /**
  *
  * @author INTEL
  */
 public class Ventana1 extends javax.swing.JFrame {
+    
+    public void reproducirSonido(String ruta) {
+    try {
+        AudioInputStream audio = AudioSystem.getAudioInputStream(
+            getClass().getResource(ruta)
+        );
+
+        Clip clip = AudioSystem.getClip();
+        clip.open(audio);
+        clip.start();
+
+    } catch (Exception e) {
+        System.out.println("Error al reproducir sonido: " + e.getMessage());
+    }
+}
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Ventana1.class.getName());
 
@@ -31,12 +53,14 @@ public class Ventana1 extends javax.swing.JFrame {
         jltipoleche = new javax.swing.JLabel();
         jdesplegabletipo = new javax.swing.JComboBox<>();
         jBaceptartipo = new javax.swing.JButton();
+        lblImagen = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jltipoleche.setText("Tipo de leche");
 
         jdesplegabletipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "...", "vaca", "bufala", "cabra" }));
+        jdesplegabletipo.addActionListener(this::jdesplegabletipoActionPerformed);
 
         jBaceptartipo.setText("Aceptar");
         jBaceptartipo.addActionListener(this::jBaceptartipoActionPerformed);
@@ -52,14 +76,21 @@ public class Ventana1 extends javax.swing.JFrame {
                 .addComponent(jdesplegabletipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(75, 75, 75))
             .addGroup(layout.createSequentialGroup()
-                .addGap(169, 169, 169)
-                .addComponent(jBaceptartipo)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(169, 169, 169)
+                        .addComponent(jBaceptartipo))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(96, 96, 96)
+                        .addComponent(lblImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(191, Short.MAX_VALUE)
+                .addContainerGap(48, Short.MAX_VALUE)
+                .addComponent(lblImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jltipoleche, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jdesplegabletipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -82,6 +113,69 @@ public class Ventana1 extends javax.swing.JFrame {
     // 3. Cerrar la Ventana1
     this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jBaceptartipoActionPerformed
+
+    private void jdesplegabletipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jdesplegabletipoActionPerformed
+        // TODO add your handling code here:
+        
+        String tipo = jdesplegabletipo.getSelectedItem().toString();
+       
+        
+    switch (tipo) {
+
+        case "vaca":
+            lblImagen.setIcon(new javax.swing.ImageIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/proyecto/imagenes/vaca.jpg"))
+                .getImage().getScaledInstance(
+                    lblImagen.getWidth(),
+                    lblImagen.getHeight(),
+                    java.awt.Image.SCALE_DEFAULT
+                )
+            ));
+            
+            String reproducirSonido = ("/proyecto/sonidos/vaca.wav");
+
+            break;
+
+
+        case "bufala":
+            
+            
+            lblImagen.setIcon(new javax.swing.ImageIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/proyecto/imagenes/bufala.jpg"))
+                .getImage().getScaledInstance(
+                    lblImagen.getWidth(),
+                    lblImagen.getHeight(),
+                    java.awt.Image.SCALE_DEFAULT
+                )
+            ));
+            
+            reproducirSonido = ("/proyecto/sonidos/bufala.wav");
+
+            break;
+
+        case "cabra":
+            lblImagen.setIcon(new javax.swing.ImageIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/proyecto/imagenes/cabra.jpg"))
+                .getImage().getScaledInstance(
+                    lblImagen.getWidth(),
+                    lblImagen.getHeight(),
+                    java.awt.Image.SCALE_DEFAULT
+                )
+            ));
+            
+           reproducirSonido = ("/proyecto/sonidos/cabra.wav");
+
+            break;
+            
+            
+        
+    
+            
+            
+      
+
+}
+    }//GEN-LAST:event_jdesplegabletipoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -112,5 +206,6 @@ public class Ventana1 extends javax.swing.JFrame {
     private javax.swing.JButton jBaceptartipo;
     private javax.swing.JComboBox<String> jdesplegabletipo;
     private javax.swing.JLabel jltipoleche;
+    private javax.swing.JLabel lblImagen;
     // End of variables declaration//GEN-END:variables
 }
