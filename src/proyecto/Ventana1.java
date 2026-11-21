@@ -7,8 +7,7 @@ package proyecto;
 
 import java.io.*;
 import javax.sound.sampled.*;
-import java.awt.Image;
-import javax.swing.ImageIcon;
+
 
 
 /**
@@ -27,7 +26,9 @@ public class Ventana1 extends javax.swing.JFrame {
         clip.open(audio);
         clip.start();
 
-    } catch (Exception e) {
+    } 
+    catch (IOException | LineUnavailableException | UnsupportedAudioFileException e) 
+    {
         System.out.println("Error al reproducir sonido: " + e.getMessage());
     }
 }
