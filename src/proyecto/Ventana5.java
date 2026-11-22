@@ -33,14 +33,17 @@ public class Ventana5 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLmateriaprimanecs = new javax.swing.JLabel();
         tfproducciondeseada = new javax.swing.JTextField();
-        jCBopciones = new javax.swing.JComboBox<>();
         jBaceptar = new javax.swing.JButton();
         jBregresar = new javax.swing.JButton();
         jBparametrosnews = new javax.swing.JButton();
+        rdbqueso = new javax.swing.JRadioButton();
+        rdbyogurt = new javax.swing.JRadioButton();
+        rdbmantequilla = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,9 +53,6 @@ public class Ventana5 extends javax.swing.JFrame {
 
         tfproducciondeseada.addActionListener(this::tfproducciondeseadaActionPerformed);
 
-        jCBopciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "...", "Queso (Kg) ", "Yogurt (L)", "Mantequilla (Kg)" }));
-        jCBopciones.addActionListener(this::jCBopcionesActionPerformed);
-
         jBaceptar.setText("Aceptar");
 
         jBregresar.setText("Regresar");
@@ -60,6 +60,15 @@ public class Ventana5 extends javax.swing.JFrame {
 
         jBparametrosnews.setText("Ingresar nuevos parametros de leche");
         jBparametrosnews.addActionListener(this::jBparametrosnewsActionPerformed);
+
+        buttonGroup1.add(rdbqueso);
+        rdbqueso.setText("Queso (Kg)  ");
+
+        buttonGroup1.add(rdbyogurt);
+        rdbyogurt.setText("Yogurt (L)");
+
+        buttonGroup1.add(rdbmantequilla);
+        rdbmantequilla.setText("Mantequilla (Kg)");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,28 +82,43 @@ public class Ventana5 extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLmateriaprimanecs, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(tfproducciondeseada, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLmateriaprimanecs, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(tfproducciondeseada, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rdbmantequilla)
+                                    .addComponent(rdbqueso)
+                                    .addComponent(rdbyogurt))))
+                        .addContainerGap(72, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCBopciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jBregresar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jBparametrosnews, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(72, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jBregresar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBparametrosnews, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCBopciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(rdbqueso)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(rdbyogurt)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfproducciondeseada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tfproducciondeseada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rdbmantequilla))
                 .addGap(26, 26, 26)
                 .addComponent(jBaceptar)
                 .addGap(18, 18, 18)
@@ -115,10 +139,6 @@ public class Ventana5 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfproducciondeseadaActionPerformed
 
-    private void jCBopcionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBopcionesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCBopcionesActionPerformed
-
     private void jBregresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBregresarActionPerformed
         // TODO add your handling code here:
         Ventana4 v4=new Ventana4();
@@ -137,14 +157,14 @@ public class Ventana5 extends javax.swing.JFrame {
     }
     private void calcularMateriaPrima() {
         try {
-            String productoSeleccionado = jCBopciones.getSelectedItem().toString().trim();
-            String textoCantidad = tfproducciondeseada.getText().trim();
-
-            if (productoSeleccionado.equals("...")) {
-                javax.swing.JOptionPane.showMessageDialog(this, "Por favor seleccione un producto del menú desplegable.", "Selección requerida", javax.swing.JOptionPane.WARNING_MESSAGE);
+            // 1. Verificar que al menos un RadioButton esté seleccionado
+            if (!rdbqueso.isSelected() && !rdbyogurt.isSelected() && !rdbmantequilla.isSelected()) {
+                javax.swing.JOptionPane.showMessageDialog(this, "Por favor seleccione un producto.", "Selección requerida", javax.swing.JOptionPane.WARNING_MESSAGE);
                 return;
             }
 
+            // 2. Validar que el campo de texto no esté vacío
+            String textoCantidad = tfproducciondeseada.getText().trim();
             if (textoCantidad.isEmpty()) {
                 javax.swing.JOptionPane.showMessageDialog(this, "Por favor ingrese la cantidad deseada de producto.", "Campo vacío", javax.swing.JOptionPane.WARNING_MESSAGE);
                 return;
@@ -160,35 +180,25 @@ public class Ventana5 extends javax.swing.JFrame {
             float lecheNecesaria = 0;
             String resultadoTexto = "";
 
-            // Actualizamos los case con las nuevas etiquetas que incluyen unidades
-            switch (productoSeleccionado) {
-                case "Queso (Kg)":
-                    lecheNecesaria = cantidadDeseada / 0.11f;
-                    resultadoTexto = String.format("%.2f L de leche", lecheNecesaria);
-                    break;
-
-                case "Yogurt (L)":
-                    lecheNecesaria = cantidadDeseada / 0.96f;
-                    resultadoTexto = String.format("%.2f L de leche", lecheNecesaria);
-                    break;
-
-                case "Mantequilla (Kg)":
-                    lecheNecesaria = cantidadDeseada / 0.04f;
-                    resultadoTexto = String.format("%.2f L de leche", lecheNecesaria);
-                    break;
-
-                default:
-                    resultadoTexto = "";
-                    break;
-
-        }
+            // 3. Calcular según el RadioButton seleccionado usando if / else if
+            if (rdbqueso.isSelected()) {
+                lecheNecesaria = cantidadDeseada / 0.11f;
+                resultadoTexto = String.format("%.2f L de leche", lecheNecesaria);
+            } else if (rdbyogurt.isSelected()) {
+                lecheNecesaria = cantidadDeseada / 0.96f;
+                resultadoTexto = String.format("%.2f L de leche", lecheNecesaria);
+            } else if (rdbmantequilla.isSelected()) {
+                lecheNecesaria = cantidadDeseada / 0.04f;
+                resultadoTexto = String.format("%.2f L de leche", lecheNecesaria);
+            }
 
             jLmateriaprimanecs.setText(resultadoTexto);
 
         } catch (NumberFormatException e) {
             javax.swing.JOptionPane.showMessageDialog(this, "Por favor ingrese solo valores numéricos válidos.", "Error de formato", javax.swing.JOptionPane.ERROR_MESSAGE);
-        }
-    }
+        } // <-- 1. Esta llave cierra el bloque catch
+    }     // <-- 2. Esta llave cierra el método calcularMateriaPrima()
+
     /**
      * @param args the command line arguments
      */
@@ -215,13 +225,16 @@ public class Ventana5 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jBaceptar;
     private javax.swing.JButton jBparametrosnews;
     private javax.swing.JButton jBregresar;
-    private javax.swing.JComboBox<String> jCBopciones;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLmateriaprimanecs;
+    private javax.swing.JRadioButton rdbmantequilla;
+    private javax.swing.JRadioButton rdbqueso;
+    private javax.swing.JRadioButton rdbyogurt;
     private javax.swing.JTextField tfproducciondeseada;
     // End of variables declaration//GEN-END:variables
 
