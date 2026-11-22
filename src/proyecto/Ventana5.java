@@ -4,7 +4,9 @@
  */
 package proyecto;
 
+import java.awt.Image;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -44,6 +46,7 @@ public class Ventana5 extends javax.swing.JFrame {
         rdbqueso = new javax.swing.JRadioButton();
         rdbyogurt = new javax.swing.JRadioButton();
         rdbmantequilla = new javax.swing.JRadioButton();
+        lblImagen = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,12 +66,15 @@ public class Ventana5 extends javax.swing.JFrame {
 
         buttonGroup1.add(rdbqueso);
         rdbqueso.setText("Queso (Kg)  ");
+        rdbqueso.addActionListener(this::rdbquesoActionPerformed);
 
         buttonGroup1.add(rdbyogurt);
         rdbyogurt.setText("Yogurt (L)");
+        rdbyogurt.addActionListener(this::rdbyogurtActionPerformed);
 
         buttonGroup1.add(rdbmantequilla);
         rdbmantequilla.setText("Mantequilla (Kg)");
+        rdbmantequilla.addActionListener(this::rdbmantequillaActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,43 +85,55 @@ public class Ventana5 extends javax.swing.JFrame {
                 .addComponent(jBaceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(80, 80, 80))
             .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLmateriaprimanecs, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jBregresar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jBparametrosnews, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addComponent(tfproducciondeseada, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addComponent(jLabel1)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(tfproducciondeseada, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(rdbmantequilla)
                                     .addComponent(rdbqueso)
-                                    .addComponent(rdbyogurt))))
-                        .addContainerGap(72, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jBregresar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jBparametrosnews, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                    .addComponent(rdbyogurt))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(rdbmantequilla))))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(rdbqueso)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(rdbyogurt)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addContainerGap()
+                        .addComponent(lblImagen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(18, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(rdbqueso)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rdbyogurt)
+                                .addGap(6, 6, 6))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(15, 15, 15)))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tfproducciondeseada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rdbmantequilla))
@@ -129,7 +147,7 @@ public class Ventana5 extends javax.swing.JFrame {
                 .addComponent(jBregresar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jBparametrosnews)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addGap(19, 19, 19))
         );
 
         pack();
@@ -152,6 +170,49 @@ public class Ventana5 extends javax.swing.JFrame {
         v5.setVisible(true);
         dispose();
     }//GEN-LAST:event_jBparametrosnewsActionPerformed
+
+    private void rdbquesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbquesoActionPerformed
+        // TODO add your handling code here:
+        
+       lblImagen.setIcon(new javax.swing.ImageIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/proyecto/imagenes/queso.jpg"))
+                .getImage().getScaledInstance(
+                    lblImagen.getWidth(),
+                    lblImagen.getHeight(),
+                    java.awt.Image.SCALE_DEFAULT
+                )
+            ));
+        
+            
+    }//GEN-LAST:event_rdbquesoActionPerformed
+
+    private void rdbyogurtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbyogurtActionPerformed
+        // TODO add your handling code here:
+        lblImagen.setIcon(new javax.swing.ImageIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/proyecto/imagenes/yogurt.jpg"))
+                .getImage().getScaledInstance(
+                    lblImagen.getWidth(),
+                    lblImagen.getHeight(),
+                    java.awt.Image.SCALE_DEFAULT
+                )
+            ));
+        
+            
+    }//GEN-LAST:event_rdbyogurtActionPerformed
+
+    private void rdbmantequillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbmantequillaActionPerformed
+        // TODO add your handling code here:
+        lblImagen.setIcon(new javax.swing.ImageIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/proyecto/imagenes/mantequilla.jpg"))
+                .getImage().getScaledInstance(
+                    lblImagen.getWidth(),
+                    lblImagen.getHeight(),
+                    java.awt.Image.SCALE_DEFAULT
+                )
+            ));
+        
+            
+    }//GEN-LAST:event_rdbmantequillaActionPerformed
     private void jBaceptarActionPerformed(java.awt.event.ActionEvent evt) {                                          
         calcularMateriaPrima();
     }
@@ -232,6 +293,7 @@ public class Ventana5 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLmateriaprimanecs;
+    private javax.swing.JLabel lblImagen;
     private javax.swing.JRadioButton rdbmantequilla;
     private javax.swing.JRadioButton rdbqueso;
     private javax.swing.JRadioButton rdbyogurt;
