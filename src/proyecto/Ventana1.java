@@ -59,34 +59,35 @@ public class Ventana1 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 255, 255));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        jltipoleche.setBackground(new java.awt.Color(204, 255, 255));
+        jltipoleche.setFont(new java.awt.Font("PT Serif", 0, 13)); // NOI18N
+        jltipoleche.setForeground(new java.awt.Color(83, 107, 80));
         jltipoleche.setText("Tipo de leche");
 
         jdesplegabletipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "...", "vaca", "bufala", "cabra" }));
         jdesplegabletipo.addActionListener(this::jdesplegabletipoActionPerformed);
 
+        jBaceptartipo.setBackground(new java.awt.Color(232, 201, 91));
+        jBaceptartipo.setFont(new java.awt.Font("PT Serif", 0, 13)); // NOI18N
         jBaceptartipo.setText("Aceptar");
         jBaceptartipo.addActionListener(this::jBaceptartipoActionPerformed);
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 204));
+        jButton1.setFont(new java.awt.Font("PT Serif", 0, 13)); // NOI18N
         jButton1.setText("Clic para escuchar");
         jButton1.addActionListener(this::jButton1ActionPerformed);
 
+        jLabel1.setFont(new java.awt.Font("PT Sans", 1, 13)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(83, 107, 80));
         jLabel1.setText("Selecciona el tipo de leche con el que quieres trabajar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(jltipoleche, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jdesplegabletipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(78, 78, 78))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(104, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(99, 99, 99))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -98,7 +99,18 @@ public class Ventana1 extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(178, 178, 178)
                         .addComponent(jButton1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(145, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(jltipoleche, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jdesplegabletipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(78, 78, 78))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,7 +125,7 @@ public class Ventana1 extends javax.swing.JFrame {
                 .addComponent(lblImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addComponent(jBaceptartipo)
                 .addGap(35, 35, 35))
         );
@@ -151,7 +163,7 @@ public class Ventana1 extends javax.swing.JFrame {
                 )
             ));
             
-            String reproducirSonido = ("/proyecto/sonidos/cabra.wav");
+            
 
             break;
 
@@ -168,8 +180,7 @@ public class Ventana1 extends javax.swing.JFrame {
                 )
             ));
             
-            reproducirSonido = ("/proyecto/sonidos/bufala.wav");
-
+           
             break;
 
         case "cabra":
@@ -182,8 +193,6 @@ public class Ventana1 extends javax.swing.JFrame {
                 )
             ));
             
-           reproducirSonido = ("/proyecto/sonidos/cabra.wav");
-
             break;
             
             
