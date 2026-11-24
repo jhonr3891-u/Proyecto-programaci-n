@@ -45,18 +45,25 @@ public class Ventana4 extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 204));
 
+        jBproduccionestimada.setBackground(new java.awt.Color(83, 107, 80));
+        jBproduccionestimada.setForeground(new java.awt.Color(255, 255, 255));
         jBproduccionestimada.setText("¿Desea saber cuanto producto producira?");
         jBproduccionestimada.setPreferredSize(new java.awt.Dimension(80, 28));
         jBproduccionestimada.addActionListener(this::jBproduccionestimadaActionPerformed);
 
+        jbcuantonecesita.setBackground(new java.awt.Color(83, 107, 80));
+        jbcuantonecesita.setForeground(new java.awt.Color(255, 255, 255));
         jbcuantonecesita.setText("Desea saber cuanto materia prima necesita para cierta cantidad");
         jbcuantonecesita.setPreferredSize(new java.awt.Dimension(80, 28));
         jbcuantonecesita.addActionListener(this::jbcuantonecesitaActionPerformed);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(83, 107, 80));
         jLabel1.setText("Seleccione una opción");
 
+        jLabel2.setForeground(new java.awt.Color(83, 107, 80));
         jLabel2.setText("Elija el cálculo que desea realizar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -67,12 +74,12 @@ public class Ventana4 extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jbcuantonecesita, javax.swing.GroupLayout.DEFAULT_SIZE, 368, Short.MAX_VALUE)
+                        .addComponent(jbcuantonecesita, javax.swing.GroupLayout.PREFERRED_SIZE, 368, Short.MAX_VALUE)
                         .addComponent(jBproduccionestimada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(45, 45, 45)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(108, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
