@@ -54,15 +54,20 @@ public class Ventana2 extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(460, 400));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(83, 107, 80));
         jLabel1.setText("Datos de la leche");
 
+        jltemp.setForeground(new java.awt.Color(83, 107, 80));
         jltemp.setText("Temperatura (°C):");
 
+        jlph.setForeground(new java.awt.Color(83, 107, 80));
         jlph.setText("Ph:");
 
+        jlgrasa.setForeground(new java.awt.Color(83, 107, 80));
         jlgrasa.setText("Grasa (%):");
 
-        jlden.setText("Densidad g/ml:");
+        jlden.setForeground(new java.awt.Color(83, 107, 80));
+        jlden.setText("Densidad (g/ml):");
 
         tftemp.setPreferredSize(new java.awt.Dimension(65, 25));
         tftemp.addActionListener(this::tftempActionPerformed);
@@ -73,11 +78,15 @@ public class Ventana2 extends javax.swing.JFrame {
 
         tfden.setPreferredSize(new java.awt.Dimension(65, 25));
 
-        jButton1.setText("Aceptar.");
+        jButton1.setBackground(new java.awt.Color(232, 201, 91));
+        jButton1.setFont(new java.awt.Font("PT Serif", 0, 13)); // NOI18N
+        jButton1.setText("ACEPTAR");
         jButton1.addActionListener(this::jButton1ActionPerformed);
 
-        jLabel2.setText("Cantidad (L):");
+        jLabel2.setForeground(new java.awt.Color(83, 107, 80));
+        jLabel2.setText("Cantidad ( L ):");
 
+        jLabel3.setForeground(new java.awt.Color(83, 107, 80));
         jLabel3.setText("Lote:");
 
         tflote.setPreferredSize(new java.awt.Dimension(65, 25));
@@ -86,6 +95,8 @@ public class Ventana2 extends javax.swing.JFrame {
         tfcant.setPreferredSize(new java.awt.Dimension(65, 25));
         tfcant.addActionListener(this::tfcantActionPerformed);
 
+        jLabel4.setFont(new java.awt.Font("Hiragino Maru Gothic ProN", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(83, 107, 80));
         jLabel4.setText("Tipo de leche");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -109,29 +120,25 @@ public class Ventana2 extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(92, 92, 92)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(tftemp, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlgrasa, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tflote, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tftemp, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jlgrasa, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tflote, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(12, 12, 12)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jltemp)
-                                    .addComponent(tfgrasa, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                                .addGap(12, 12, 12)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jltemp)
+                            .addComponent(tfgrasa, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(88, 88, 88))
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
+                        .addGap(12, 12, 12)
                         .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -140,11 +147,11 @@ public class Ventana2 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(11, 11, 11)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
                     .addComponent(lblAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -285,7 +292,7 @@ public class Ventana2 extends javax.swing.JFrame {
         }
 
         // Crear la ventana 3 enviándole el estado y el producto recomendado, y hacerla visible
-        ventana3 v3 = new ventana3(lote, cantidad, estadoAprobacion, productoRecomendado);
+        Ventana3 v3 = new Ventana3(lote, cantidad, estadoAprobacion, productoRecomendado);
         v3.setVisible(true);
         
         // (Opcional) Cierra la ventana 2 actual para que pase directamente a la nueva

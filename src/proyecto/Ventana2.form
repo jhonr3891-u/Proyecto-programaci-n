@@ -47,25 +47,18 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="tftemp" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="jlgrasa" min="-2" pref="62" max="-2" attributes="0"/>
+                          <Component id="tflote" min="-2" pref="75" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="6" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Component id="jButton1" min="-2" pref="277" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="tftemp" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                                  <Component id="jlgrasa" min="-2" pref="62" max="-2" attributes="0"/>
-                                  <Component id="tflote" min="-2" pref="75" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                      <Component id="jButton1" min="-2" pref="277" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="jltemp" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="tfgrasa" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jltemp" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfgrasa" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
@@ -75,9 +68,9 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel1" min="-2" pref="160" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="lblAnimal" min="-2" pref="90" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -90,12 +83,12 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="39" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   <Component id="lblAnimal" min="-2" pref="16" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
@@ -138,27 +131,42 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="20" style="0"/>
         </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="50" green="6b" red="53" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Datos de la leche"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jltemp">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="50" green="6b" red="53" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Temperatura (&#xb0;C):"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jlph">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="50" green="6b" red="53" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Ph:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jlgrasa">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="50" green="6b" red="53" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Grasa (%):"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jlden">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Densidad g/ml:"/>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="50" green="6b" red="53" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Densidad (g/ml):"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="tftemp">
@@ -194,7 +202,13 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Aceptar."/>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="5b" green="c9" red="e8" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="PT Serif" size="13" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="ACEPTAR"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
@@ -202,11 +216,17 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Cantidad (L):"/>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="50" green="6b" red="53" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Cantidad ( L ):"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="50" green="6b" red="53" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Lote:"/>
       </Properties>
     </Component>
@@ -234,6 +254,12 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Hiragino Maru Gothic ProN" size="14" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="50" green="6b" red="53" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Tipo de leche"/>
       </Properties>
     </Component>
