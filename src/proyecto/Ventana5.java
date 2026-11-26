@@ -23,7 +23,9 @@ public class Ventana5 extends javax.swing.JFrame {
      */
     public Ventana5() {
         initComponents();
+        
         jBaceptar.addActionListener(this::jBaceptarActionPerformed);
+        getRootPane().setDefaultButton(jBaceptar);
     }
 
     /**

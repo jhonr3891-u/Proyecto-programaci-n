@@ -34,6 +34,7 @@ public class Ventana6 extends javax.swing.JFrame {
         
         for (int k=0;k<imagenes.length;k++)
             imagenes[k]=new ImageIcon(getClass().getResource("/proyecto/imagenes/imagen"+(k+1)+".jpg"));
+        getRootPane().setDefaultButton(btn_siguiente);
     }
 
     /**

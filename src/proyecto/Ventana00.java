@@ -23,7 +23,7 @@ public class Ventana00 extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         ImageIcon variable=new ImageIcon(getClass().getResource("/proyecto/imagenes/logotipo.jpg"));
         lbl_image.setIcon(new ImageIcon(variable.getImage().getScaledInstance(lbl_image.getWidth(),lbl_image.getHeight(),Image.SCALE_DEFAULT)));
-    
+        getRootPane().setDefaultButton(jButton1);
     }
 
     /**

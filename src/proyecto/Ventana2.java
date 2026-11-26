@@ -17,6 +17,7 @@ public class Ventana2 extends javax.swing.JFrame {
      */
     public Ventana2() {
         initComponents();
+        getRootPane().setDefaultButton(jButton1);
     }
     public Ventana2(String animal) {
         initComponents();
