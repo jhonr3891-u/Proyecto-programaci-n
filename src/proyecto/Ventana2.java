@@ -324,7 +324,7 @@ public class Ventana2 extends javax.swing.JFrame {
         }
 
         // Crear la ventana 3 enviándole el estado y el producto recomendado, y hacerla visible
-        ventana3 v3 = new ventana3(lote, cantidad, estadoAprobacion, productoRecomendado);
+        Ventana3 v3 = new Ventana3(lote, cantidad, estadoAprobacion, productoRecomendado);
         v3.setVisible(true);
         
         // (Opcional) Cierra la ventana 2 actual para que pase directamente a la nueva
