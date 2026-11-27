@@ -40,6 +40,7 @@ public class Ventana1 extends javax.swing.JFrame {
      */
     public Ventana1() {
         initComponents();
+        this.setLocationRelativeTo(null);
         getRootPane().setDefaultButton(jBaceptartipo);
     }
 
@@ -170,7 +171,17 @@ public class Ventana1 extends javax.swing.JFrame {
 
     private void jBaceptartipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBaceptartipoActionPerformed
 // 1. Obtener la opción elegida en el ComboBox
+  
     String animalSeleccionado = jdesplegabletipo.getSelectedItem().toString();
+    if ("...".equals(animalSeleccionado)) {
+    javax.swing.JOptionPane.showMessageDialog(
+        this,
+        "Por favor selecciona un tipo de leche válido.",
+        "Selección requerida",
+        javax.swing.JOptionPane.WARNING_MESSAGE
+    );
+    return;
+   }
 
     // 2. Abrir la Ventana2 enviándole la opción seleccionada
     Ventana2 v2 = new Ventana2(animalSeleccionado);
